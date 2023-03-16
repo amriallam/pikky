@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-center align-items-center gap-4">
+    <img src="../../../assets/products/{{type}}/{{item.image}}" width="400rem">
+    <div class="d-flex flex-column gap-3">
+        <span class="fw-light mt-1">{{ item.producer }}</span>
+        <span class="fw-semibold fs-5">{{ item.name }}</span>
+        <span class="fw-normal fs-6">{{item.description}}</span>
+        <div>
+            <span class="fw-normal fs-6 me-3">Sizes</span>
+            <span *ngFor="let size of item.sizes">
+                <input type="radio" class="btn-check" name="itemSize" id="{{size}}">
+                <label class="btn btn-outline-dark fw-light me-2 py-1 px-4" for="{{size}}">{{size}}</label>
+            </span>
+        </div>
+        <div class="d-flex align-items-center">
+            <span class="fw-normal fs-6 me-3">Colors</span>
+            <!-- <div *ngFor="let colorz of item.colors" class="colorCircle d-inline-block me-1" ></div> -->
+            <span class="d-flex align-items-center" *ngFor="let color of item.colors">
+                <input type="radio" class="btn-check" name="itemColor" id="{{color}}">
+                <label class="colorCircle fw-light me-2" [ngStyle]="{'background-color':color}" for="{{color}}"></label>
+            </span>
+        </div>
+        <span class="fw-semibold fs-5">{{ item.price }} L.E</span>
+    </div>
+</div>
+
+

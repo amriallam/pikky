@@ -1,0 +1,20 @@
+export class Item {
+    id:number;
+    name:string;
+    description:string;
+    price:number;
+    quantity:number;
+    producer:string;
+    image:string;
+    featured:boolean=false;
+    constructor(_id:number,_name:string,_description:string,_price:number,_quantity:number,_producer:string,_featured:boolean,_image:string){
+        this.id=_id;
+        this.name=_name;
+        this.description=_description;
+        this.price=_price;
+        this.quantity=_quantity;
+        this.producer=_producer;
+        this.featured=_featured;
+        this.image=_image;
+    }
+}

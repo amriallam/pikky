@@ -1,0 +1,25 @@
+<div class="px-5">
+  <div class="d-flex justify-content-between">
+    <h3>Trending in fashon</h3>
+    <a routerLink="/clothes"><span class="fw-normal">Browse All</span></a>
+  </div>
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <a ngxSlickItem *ngFor="let item of featuredClothes" routerLink="/item/clothes/{{item.id}}">
+    <div class="item-card">
+      <div class="bg-image hover-overlay ripple slide" data-mdb-ripple-color="light">
+        <img
+          src="../../assets/products/clothes/{{ item.image }}"
+          class="img-fluid" width="200rem"
+        />
+      </div>
+      <div class="d-flex">
+        <div class="d-flex flex-column">
+          <span class="fw-light mt-1">{{ item.producer }}</span>
+          <span class="fw-semibold fs-5">{{ item.name }}</span>
+        </div>
+      </div>
+    </div> 
+  </a>
+  </ngx-slick-carousel>
+</div>
+

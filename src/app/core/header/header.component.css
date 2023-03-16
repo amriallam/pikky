@@ -1,0 +1,7 @@
+.navbar {
+    padding: 10px;
+}
+
+#searchButton:hover {
+    background-color: rgba(226, 225, 225, 0.562);
+}

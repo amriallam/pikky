@@ -1,0 +1,15 @@
+* {
+  font-family: "roboto";
+}
+a {
+  text-decoration: none !important;
+}
+.routerActiveLink{
+  color:black !important;
+}
+.item-card {
+  transition: all 0.3s;
+}
+.item-card:hover {
+  filter: brightness(90%);
+}
